@@ -1,6 +1,6 @@
 # acamo PM Skills
 
-Acht einsatzfertige KI-Bausteine für die Projekt- und Führungspraxis, erprobt in den
+Neun einsatzfertige KI-Bausteine für die Projekt- und Führungspraxis, erprobt in den
 Seminaren und Workshops von [acamo](https://acamo.com).
 
 Kein Tool, kein Login, keine Plattformbindung. Jeder Baustein ist ein Skill im offenen
@@ -17,6 +17,7 @@ ChatGPT und per Copy-Paste in jedem anderen Chatfenster.
 | [`interview-case`](interview-case/) | Erzeugt eine realistische 30-Minuten-Fallstudie für Auswahlgespräche, samt Bewertungsraster mit beschriebenen Ankerpunkten. |
 | [`kommunikationstest-4-ohren`](kommunikationstest-4-ohren/) | Selbsttest nach dem 4-Ohren-Modell von Schulz von Thun: Auf welchem Ohr hören Sie zuerst? |
 | [`meeting-agenda`](meeting-agenda/) | Entwickelt im Dialog eine Agenda, die auf Ergebnisse gebaut ist statt auf Themen. Präsenz, virtuell oder hybrid. |
+| [`risikoregister`](risikoregister/) | Erstellt aus einem Projekt-Factsheet ein Risikoregister mit Eintrittswahrscheinlichkeit, Schaden, Erwartungswert, Frühindikatoren und Maßnahmen. |
 | [`praesentation-scqa`](praesentation-scqa/) | Baut aus vorhandenem Material eine entscheidungsreife Präsentation in acht Folien nach SCQA und Pyramidenprinzip, samt Sprechernotizen. |
 | [`prompt-of-prompts`](prompt-of-prompts/) | Entwickelt im Dialog einen wirksamen Prompt oder verbessert einen vorhandenen. Der Baustein, mit dem die anderen entstanden sind. |
 
