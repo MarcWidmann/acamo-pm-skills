@@ -1,93 +1,60 @@
 # acamo PM Skills
 
-Prompt-Bausteine für die KI-gestützte Projektführung, aus der Workshop-Praxis von
-[acamo](https://acamo.com) (Marc Widmann).
+Sechs einsatzfertige KI-Bausteine für die Projekt- und Führungspraxis, erprobt in den
+Seminaren und Workshops von [acamo](https://acamo.com).
 
-Jeder Ordner ist ein eigenständiger Skill: eine `SKILL.md` mit Frontmatter und
-Anweisungen in Markdown, optional ergänzt um Material im Unterordner `assets/`. Das
-Format folgt der von Anthropic veröffentlichten Agent-Skills-Spezifikation. Der Inhalt
-ist am Ende schlichtes Markdown und damit in jedem Werkzeug verwendbar.
+Kein Tool, kein Login, keine Plattformbindung. Jeder Baustein ist ein Skill im offenen
+Agent-Skills-Format: eine `SKILL.md` mit Anweisungen in Markdown. Das läuft in Claude, in
+ChatGPT und per Copy-Paste in jedem anderen Chatfenster.
 
-## Warum ein Repository und keine Custom GPTs mehr
+## Die Skills
 
-Diese Bausteine liefen bis zuletzt als ChatGPT Custom GPTs. OpenAI stellt Custom GPTs zum
-**11. Dezember 2026** ein (Enterprise mit genehmigtem Aufschub: 11. Februar 2027);
-danach sind die GPTs und ihre Seiten nicht mehr erreichbar, der Migrationspfad führt auf
-Plugins.
-
-Ein Prompt, der in einem Git-Repository liegt, überlebt solche Umbauten. Er ist
-versionierbar, in beiden großen Ökosystemen verwendbar und notfalls per Copy-Paste in
-jedem Chatfenster einsetzbar. Das Asset ist der Prompt, nicht das Gefäß.
-
-## Inhalt
-
-| Skill | Wofür |
+| Skill | Was er leistet |
 |---|---|
-| [`entscheidungsfindung-wrap`](entscheidungsfindung-wrap/) | Schwierige Entscheidung strukturiert durchdenken (WRAP nach Chip und Dan Heath) |
-| [`meeting-protokoll`](meeting-protokoll/) | Transkript zu Protokoll inklusive Risiken, Aufgaben, Entscheidungen und Teamdynamik |
-| [`belbin-teamrollen`](belbin-teamrollen/) | Interaktive Selbsteinschätzung zu den neun Teamrollen, DE/EN |
-| [`interview-case`](interview-case/) | 30-Minuten-Fallstudie samt Bewertungsraster für Auswahlgespräche |
-| [`kommunikationstest-4-ohren`](kommunikationstest-4-ohren/) | Interaktiver Selbsttest nach dem 4-Ohren-Modell (Schulz von Thun) |
-| [`meeting-agenda`](meeting-agenda/) | Ergebnisorientierte Agenda im Dialog entwickeln |
+| [`entscheidungsfindung-wrap`](entscheidungsfindung-wrap/) | Führt eine schwierige Entscheidung strukturiert durch den WRAP-Prozess nach Chip und Dan Heath. Für Go/No-Go, Priorisierung, Investitionen, Besetzungsfragen. |
+| [`meeting-protokoll`](meeting-protokoll/) | Macht aus einem Transkript ein belastbares Protokoll: Entscheidungen, Aufgaben mit Verantwortlichen, Risiken, und auf Wunsch eine Analyse der Teamdynamik. |
+| [`belbin-teamrollen`](belbin-teamrollen/) | Interaktive Selbsteinschätzung zu den neun Teamrollen, zweisprachig Deutsch und Englisch. Ideal als Einstieg in einen Teamworkshop. |
+| [`interview-case`](interview-case/) | Erzeugt eine realistische 30-Minuten-Fallstudie für Auswahlgespräche, samt Bewertungsraster mit beschriebenen Ankerpunkten. |
+| [`kommunikationstest-4-ohren`](kommunikationstest-4-ohren/) | Selbsttest nach dem 4-Ohren-Modell von Schulz von Thun: Auf welchem Ohr hören Sie zuerst? |
+| [`meeting-agenda`](meeting-agenda/) | Entwickelt im Dialog eine Agenda, die auf Ergebnisse gebaut ist statt auf Themen. Präsenz, virtuell oder hybrid. |
 
-## Verwendung
+## So setzen Sie sie ein
 
-**Claude.** Eigene Skills lassen sich in der Weboberfläche hochladen. In Claude Code
-funktioniert die Installation direkt aus einem Repository. Über die API können Skills
-ebenfalls hinterlegt werden.
+**Claude.** Skills lassen sich in der Weboberfläche hochladen, in Claude Code direkt aus
+diesem Repository installieren und über die API hinterlegen.
 
-**ChatGPT.** Skills sind der Instruktionsteil eines Plugins, Referenzmaterial wird als
-Datei angehängt. Wer kein Plugin bauen will, kopiert den Text unterhalb des Frontmatters
-in ein Projekt oder in benutzerdefinierte Anweisungen.
+**ChatGPT.** Skills sind der Instruktionsteil eines Plugins. Wer kein Plugin bauen will,
+kopiert den Text unterhalb des Frontmatters in ein Projekt oder in die
+benutzerdefinierten Anweisungen.
 
 **Alles andere** (Gemini, Copilot, Perplexity): Text unterhalb des Frontmatters kopieren
 und als ersten Prompt einfügen.
 
-Der Block zwischen den `---` am Dateianfang (`name`, `description`) steuert nur, wann ein
-Assistent den Skill von sich aus heranzieht. Beim manuellen Einsatz wird er weggelassen.
+Der Block zwischen den `---` am Dateianfang steuert nur, wann ein Assistent den Skill von
+sich aus heranzieht. Beim manuellen Einsatz lassen Sie ihn weg.
 
-## Was gegenüber den Custom GPTs geändert wurde
+## Warum offene Dateien statt fertiger Bots
 
-Die Bausteine stammen aus der Zeit von GPT-4. Beim Übertragen wurden sie an die heutige
-Modellgeneration angepasst:
+Plattformen bauen um, Produkte verschwinden, Anbieter wechseln. Ein Prompt, der als Datei
+in einem Repository liegt, überlebt das. Er ist versionierbar, in jedem Ökosystem
+einsetzbar und notfalls in zehn Sekunden per Copy-Paste im Einsatz. Das Asset ist der
+Prompt, nicht das Gefäß.
 
-- **Rollen-Beschwörung reduziert.** Aufladungen wie „Act as an experienced project
-  manager and organizational psychologist" bringen bei heutigen Modellen kaum noch
-  Wirkung. Geblieben ist der Auftrag, weggefallen ist die Kostümierung.
-- **Kontext statt Formulierungstricks.** Jeder Skill benennt jetzt ausdrücklich, welche
-  Angaben und Dokumente er braucht, und fragt danach. Der Engpass ist heute fehlender
-  Kontext, nicht die Wortwahl im Prompt.
-- **Keine Denk-Aufforderungen.** Formeln wie „denke intensiv nach" oder „think step by
-  step" sind bei Reasoning-Modellen wirkungslos und vermitteln ein falsches Bild davon,
-  wie die Werkzeuge arbeiten.
-- **Annahmen sichtbar.** Statt bei fehlenden Angaben stehenzubleiben, treffen die Skills
-  eine Annahme und kennzeichnen sie. Das hält den Ablauf im Workshop am Laufen.
-- **Grenzen benannt.** Bei den heiklen Anwendungen (Meeting-Analyse, Teamrollen,
-  Kommunikationstest, Auswahlverfahren) steht jetzt ein Abschnitt zum Einsatz: was das
-  Ergebnis ist, was es nicht ist, und was arbeitsrechtlich oder datenschutzrechtlich
-  beachtet werden muss.
-- **Zustandsführung bei interaktiven Tests.** Fortschrittsanzeige, Umgang mit ungültigen
-  Eingaben, Unterbrechen und Fortsetzen.
+## Haltung
 
-## Offene Punkte
-
-- `kommunikationstest-4-ohren/assets/situationen.md` ist ein Gerüst. Die zwölf
-  Situationen aus dem Original-PDF müssen dort wörtlich eingesetzt werden. Sie wurden
-  bewusst nicht nachgebildet, weil ein erfundener Fragebogen nicht zum Zuordnungs-
-  schlüssel passen würde.
-- Weitere Bausteine aus dem Workshop sind noch nicht übertragen: Konfliktgespräch,
-  Risikoidentifikation, Selbstcoaching und Lernen, Statusbericht aus Jira,
-  Stakeholderidentifikation, Prompt of Prompts.
-
-## Hinweise
-
-Alle Skills sind Arbeitsmittel für Menschen, die die Verantwortung behalten. Sie
+Diese Skills sind Arbeitsmittel für Menschen, die die Verantwortung behalten. Sie
 ersetzen keine Führungsentscheidung, keine psychologische Diagnostik und keine
-Personalauswahl. Wo ein Ergebnis personenbezogen wird, steht das im jeweiligen Skill.
+Personalauswahl. Wo ein Ergebnis personenbezogen wird, steht der passende Hinweis im
+jeweiligen Skill.
 
-Prüfe vor dem Einsatz, welche Daten in welches Werkzeug gegeben werden dürfen. Für
+Prüfen Sie vor dem Einsatz, welche Daten in welches Werkzeug gegeben werden dürfen. Für
 Transkripte, Bewerbungsunterlagen und Projektdaten gilt das besonders.
 
-## Kontakt
+## Über acamo
 
-Marc Widmann, acamo, [acamo.com](https://acamo.com)
+Marc Widmann begleitet Organisationen dabei, Projekte mit KI zu führen: als Berater,
+Seminarleiter und Speaker. Mehr dazu unter
+[acamo.com](https://acamo.com) und im Seminar
+[Projekte mit KI führen](https://acamo.com/seminar-projekte-mit-ki-fuehren).
+
+Fragen, Anregungen, eigene Varianten: gern als Issue oder Pull Request.
