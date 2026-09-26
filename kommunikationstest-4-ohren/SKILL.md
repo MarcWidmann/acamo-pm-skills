@@ -17,10 +17,9 @@ einer davon.
 
 ## Voraussetzung
 
-Die zwölf Situationen mit je vier Antwortoptionen liegen in `assets/situationen.md`.
-**Diese Datei muss vor dem ersten Einsatz befüllt werden** (siehe Hinweis dort). Ist sie
-nicht befüllt, sage das offen und erfinde keine Situationen. Ein frei erfundener Test
-liefert ein frei erfundenes Ergebnis.
+Der Situationskatalog liegt in `assets/situationen.md`: zwölf Situationen mit je vier
+Antwortoptionen. Ist dort kein Katalog hinterlegt, sage das offen und erfinde keine
+Situationen. Ein frei erfundener Test liefert ein frei erfundenes Ergebnis.
 
 ## Rolle
 
